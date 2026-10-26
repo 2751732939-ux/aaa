@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>曾繁翔 · 个人简历</title>
+<meta name="description" content="曾繁翔｜安徽理工大学智能车辆工程 2026 级。AIGC 全链路、Vibe Coding、无代码智能体、SolidWorks 建模。">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0a0907">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0907'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23d4af37' stroke-width='2'/%3E%3Ctext x='32' y='42' font-size='26' text-anchor='middle' fill='%23e8c76a' font-family='serif'%3E曾%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0a0907;--bg2:#100e0a;--card:#14110c;--card2:#1a160f;
+  --line:rgba(212,175,55,.2);--line2:rgba(212,175,55,.42);
+  --text:#f0e8d4;--muted:#a69c86;--faint:#6f6756;
+  --gold:#d4af37;--gold-hi:#f4dd94;--gold-lo:#9a7826;
+  --grad:linear-gradient(135deg,#f7e7ae 0%,#e2c062 32%,#c49a32 62%,#8f6d1f 100%);
+  --on-gold:#17120a;
+  --glow:rgba(212,175,55,.16);
+  --shadow:0 1px 0 rgba(255,236,180,.04) inset,0 10px 30px -12px rgba(0,0,0,.7);
+  --shadow-hi:0 1px 0 rgba(255,236,180,.06) inset,0 18px 40px -14px rgba(0,0,0,.85),0 0 0 1px rgba(212,175,55,.35);
+  --serif:"Songti SC","STSong","Noto Serif SC","Source Han Serif SC","SimSun",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --r:14px;--nav-h:56px;--sub-h:44px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:calc(var(--nav-h) + var(--sub-h) + 12px)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{
+  margin:0;font:15px/1.7 var(--sans);color:var(--text);background:var(--bg);
+  -webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;
+  background-image:
+    radial-gradient(1000px 520px at 85% -8%,var(--glow),transparent 62%),
+    radial-gradient(700px 420px at -10% 38%,var(--glow),transparent 60%),
+    repeating-linear-gradient(135deg,transparent 0 22px,rgba(212,175,55,.022) 22px 23px);
+  background-attachment:scroll;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+h1,h2,h3,h4,p,ul{margin:0}
+ul{padding:0;list-style:none}
+:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 16px}
+.skip{position:absolute;left:-999px;top:8px;z-index:99;background:var(--gold);color:var(--on-gold);padding:8px 14px;border-radius:8px}
+.skip:focus{left:12px}
+.gold-text{color:var(--gold-hi);background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.print-only{display:none}
+
+/* ===== 导航 ===== */
+.nav{position:fixed;inset:0 0 auto;z-index:50;background:color-mix(in srgb,var(--bg) 82%,transparent);
+  -webkit-backdrop-filter:saturate(140%) blur(14px);backdrop-filter:saturate(140%) blur(14px);
+  border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top)}
+@supports not (background:color-mix(in srgb,red 50%,blue)){.nav{background:var(--bg)}}
+.nav-bar{display:flex;align-items:center;gap:10px;height:var(--nav-h)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0;flex:1}
+.mono{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;flex:none;
+  font:600 16px/1 var(--serif);color:var(--gold-hi);border:1px solid var(--line2);
+  background:radial-gradient(circle at 30% 25%,rgba(244,221,148,.18),transparent 60%),var(--card)}
+.brand b{font:600 17px/1.2 var(--serif);letter-spacing:.18em;white-space:nowrap}
+.brand small{display:block;font-size:11px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
+.tools{display:flex;gap:6px;flex:none}
+.ibtn{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;cursor:pointer;
+  background:transparent;border:1px solid var(--line);transition:border-color .2s var(--ease),background-color .2s var(--ease),transform .2s var(--ease)}
+.ibtn:hover{border-color:var(--line2);background:var(--card)}
+.ibtn:active{transform:scale(.96)}
+.ibtn svg{width:20px;height:20px;stroke:var(--gold-hi);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.anchors{display:flex;gap:4px;height:var(--sub-h);align-items:center;overflow-x:auto;scrollbar-width:none;
+  -webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+.anchors::-webkit-scrollbar{display:none}
+.anchors a{flex:none;text-decoration:none;font-size:14px;color:var(--muted);padding:0 12px;height:36px;display:flex;align-items:center;
+  border-radius:999px;border:1px solid transparent;transition:color .2s var(--ease),border-color .2s var(--ease),background-color .2s var(--ease)}
+.anchors a:hover{color:var(--text)}
+.anchors a.on{color:var(--gold-hi);border-color:var(--line2);background:var(--card)}
+@media (min-width:900px){
+  :root{--sub-h:0px}
+  html{scroll-padding-top:80px}
+  .nav .wrap{display:flex;align-items:center;gap:16px;height:64px}
+  .nav-bar{display:contents}
+  .brand{flex:0 0 auto}
+  .anchors{order:1;margin-left:auto;height:auto;-webkit-mask-image:none;mask-image:none}
+  .tools{order:2}
+}
+
+/* ===== Hero ===== */
+.hero{position:relative;padding:calc(var(--nav-h) + var(--sub-h) + env(safe-area-inset-top) + 28px) 0 36px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:linear-gradient(var(--line) 1px,transparent 1px) 0 0/48px 48px,linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/48px 48px;
+  -webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000,transparent 75%)}
+.hero .wrap{position:relative;display:grid;gap:22px}
+.hero-top{display:flex;gap:18px;align-items:center}
+.portrait{position:relative;flex:none;width:104px;aspect-ratio:3/4}
+.portrait::before{content:"";position:absolute;inset:-5px;border-radius:999px 999px 16px 16px;padding:1px;background:var(--grad);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;border-radius:999px 999px 12px 12px;background:var(--card2);
+  filter:saturate(.92) contrast(1.02)}
+.portrait .dot{position:absolute;left:50%;bottom:-11px;transform:translateX(-50%);width:20px;height:20px;border-radius:50%;
+  background:var(--bg);border:1px solid var(--line2);display:grid;place-items:center}
+.portrait .dot::after{content:"";width:6px;height:6px;transform:rotate(45deg);background:var(--gold)}
+.eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:8px}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--gold)}
+.hero h1{font:600 clamp(40px,12vw,72px)/1.05 var(--serif);letter-spacing:.14em;margin:8px 0 6px}
+.sub{color:var(--muted);font-size:13.5px;line-height:1.6}
+.summary{position:relative;padding:16px 16px 16px 18px;border-radius:var(--r);background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);font-size:15px}
+.summary::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:2px;border-radius:2px;background:var(--grad)}
+.summary b{color:var(--gold-hi);font-weight:600}
+.kw{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;min-height:30px;padding:3px 12px;border-radius:999px;font-size:13px;line-height:1.3;
+  border:1px solid var(--line);background:var(--card);color:var(--text)}
+.chip.g{border-color:var(--line2);color:var(--gold-hi);background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box;border-color:transparent}
+.cta{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 16px;border-radius:12px;cursor:pointer;
+  text-decoration:none;font-size:15px;font-weight:500;letter-spacing:.04em;border:1px solid var(--line2);background:var(--card);
+  transition:transform .2s var(--ease),box-shadow .2s var(--ease),border-color .2s var(--ease),filter .2s var(--ease)}
+.btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-hi)}
+.btn:active{transform:translateY(0)}
+.btn.primary{grid-column:1/-1;background:var(--grad);color:var(--on-gold);border-color:transparent;font-weight:600;
+  box-shadow:0 8px 24px -10px rgba(212,175,55,.55)}
+.btn.primary:hover{filter:brightness(1.06)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:var(--r);background:var(--card);overflow:hidden}
+.facts div{padding:12px 8px;text-align:center}
+.facts div+div{border-left:1px solid var(--line)}
+.facts b{display:block;font:600 20px/1.2 var(--serif)}
+.facts span{font-size:12px;color:var(--muted)}
+@media (min-width:760px){
+  .hero{padding-top:110px;padding-bottom:56px}
+  .hero .wrap{grid-template-columns:minmax(0,1fr) 220px;column-gap:48px;align-items:start}
+  .hero-top{grid-column:1;display:block}
+  .portrait{grid-column:2;grid-row:1/span 5;width:220px;margin-top:10px}
+  .hero-top .portrait{display:none}
+  .portrait.lg{display:block}
+  .cta{grid-template-columns:auto auto auto;justify-content:start}
+  .btn.primary{grid-column:auto}
+  .hero .wrap>*:not(.portrait){grid-column:1}
+}
+.portrait.lg{display:none}
+@media (min-width:760px){.portrait.lg{display:block}}
+
+/* ===== 区块 ===== */
+.sec{padding:40px 0}
+.sec-h{display:flex;align-items:baseline;gap:12px;margin-bottom:20px}
+.sec-h .no{font:500 13px/1 var(--serif);color:var(--gold);letter-spacing:.1em;padding:6px 8px;border:1px solid var(--line2);border-radius:6px;align-self:center}
+.sec-h h2{font:600 24px/1.2 var(--serif);letter-spacing:.12em}
+.sec-h .en{margin-left:auto;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--faint)}
+.orn{display:flex;align-items:center;gap:10px;color:var(--gold);margin:0 auto;max-width:1080px;padding:0 16px}
+.orn::before,.orn::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--line2),transparent)}
+.orn i{width:7px;height:7px;transform:rotate(45deg);border:1px solid var(--gold)}
+@media (min-width:760px){.sec{padding:64px 0}.sec-h h2{font-size:30px}.sec-h{margin-bottom:28px}}
+
+.card{position:relative;background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);
+  transition:transform .22s var(--ease),box-shadow .22s var(--ease),border-color .22s var(--ease)}
+@media (hover:hover){.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hi);border-color:transparent}}
+.card.corner::before,.card.corner::after{content:"";position:absolute;width:14px;height:14px;border:1px solid var(--gold);opacity:.75;pointer-events:none}
+.card.corner::before{top:8px;left:8px;border-right:0;border-bottom:0}
+.card.corner::after{bottom:8px;right:8px;border-left:0;border-top:0}
+
+/* 亮点 */
+.hl{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.hl .card{padding:18px 14px 16px}
+.hl .card:first-child{grid-column:1/-1}
+.hl .num{font:600 34px/1 var(--serif);letter-spacing:.02em;display:flex;align-items:baseline;gap:2px}
+.hl .num small{font-size:16px}
+.hl h3{font-size:14px;font-weight:600;margin:10px 0 6px;line-height:1.45}
+.hl p{font-size:13px;color:var(--muted);line-height:1.6}
+@media (min-width:760px){.hl{grid-template-columns:repeat(6,1fr);gap:16px}.hl .card{grid-column:span 2;padding:22px 20px}.hl .card:first-child,.hl .card:nth-child(2){grid-column:span 3}.hl .num{font-size:44px}}
+
+
+/* 时间线 */
+.tl{position:relative;display:grid;gap:16px;padding-left:22px}
+.tl::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:linear-gradient(var(--gold),var(--line) 70%,transparent)}
+.tl-item{padding:18px 16px}
+.tl-item::before{content:"";position:absolute;left:-22px;top:24px;width:11px;height:11px;transform:rotate(45deg);background:var(--bg);border:1px solid var(--gold);box-shadow:0 0 0 3px var(--bg)}
+.tl-item .head{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;justify-content:space-between}
+.tl-item h3{font:600 17px/1.4 var(--serif);letter-spacing:.03em}
+.date{font-size:12.5px;color:var(--gold);font-variant-numeric:tabular-nums;letter-spacing:.02em;white-space:nowrap}
+.track{font-size:13.5px;color:var(--muted);margin-top:2px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
+.tag{font-size:12.5px;padding:3px 10px;border-radius:6px;border:1px solid var(--line);color:var(--text);line-height:1.5}
+.tag.res{color:var(--on-gold);background:var(--grad);border-color:transparent;font-weight:600}
+.star{display:grid;gap:10px}
+.star li{display:grid;grid-template-columns:auto 1fr;gap:10px;font-size:14px;line-height:1.7}
+.star b{font:600 12px/1 var(--sans);color:var(--gold);border:1px solid var(--line2);border-radius:5px;padding:5px 6px;height:max-content;margin-top:2px;letter-spacing:.06em}
+.star li.r span{color:var(--text)}
+.star li:not(.r) span{color:var(--muted)}
+@media (min-width:760px){.tl{padding-left:30px}.tl-item{padding:22px 24px}.tl-item::before{left:-30px}}
+
+/* 项目 */
+.pj{display:grid;gap:14px}
+.pj .card{padding:18px 16px;display:flex;flex-direction:column;gap:12px}
+.pj .top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.pj h3{font:600 17px/1.45 var(--serif)}
+.pj .badge{flex:none;font-size:11.5px;padding:3px 9px;border-radius:999px;border:1px solid var(--line2);color:var(--gold-hi);white-space:nowrap}
+.stack{display:flex;flex-wrap:wrap;gap:6px}
+.stack span{font-size:12px;padding:2px 9px;border-radius:5px;background:var(--glow);color:var(--text)}
+.pj dl{margin:0;display:grid;gap:8px}
+.pj dt{font-size:12px;letter-spacing:.2em;color:var(--gold)}
+.pj dd{margin:2px 0 0;font-size:14px;color:var(--muted);line-height:1.7}
+.pj dd.now{color:var(--text)}
+.pj .link{margin-top:auto;align-self:flex-start;font-size:14px;color:var(--gold-hi);text-decoration:none;border-bottom:1px solid var(--line2);min-height:32px;display:inline-flex;align-items:center}
+@media (min-width:760px){.pj{grid-template-columns:1fr 1fr;gap:18px}.pj .card{padding:22px 22px}}
+
+/* 技能 */
+.sk{display:grid;gap:12px}
+.sk .card{padding:18px 16px}
+.sk .hd{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.sk .ic{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;border:1px solid var(--line2);flex:none;
+  background:radial-gradient(circle at 30% 25%,rgba(244,221,148,.16),transparent 65%)}
+.sk .ic svg{width:21px;height:21px;fill:none;stroke:var(--gold-hi);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.sk h3{font:600 16px/1.3 var(--serif);letter-spacing:.06em}
+.sk h3 small{display:block;font:11px/1.4 var(--sans);letter-spacing:.2em;color:var(--faint);text-transform:uppercase;margin-top:3px}
+.sk .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.sk .chips .chip{min-height:28px;font-size:12.5px;padding:2px 10px}
+.sk p{font-size:13.5px;color:var(--muted);line-height:1.7}
+@media (min-width:640px){.sk{grid-template-columns:1fr 1fr}}
+@media (min-width:980px){.sk{grid-template-columns:repeat(3,1fr);gap:16px}.sk .card{padding:22px 20px}}
+
+/* 教育 */
+.edu{display:grid;gap:14px}
+.edu .main{padding:20px 16px}
+.edu h3{font:600 19px/1.4 var(--serif);letter-spacing:.04em}
+.edu .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;align-items:baseline}
+.edu .dept{color:var(--muted);font-size:14px;margin-top:4px}
+.edu .major{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+.edu .note{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);font-size:14px;color:var(--muted)}
+.edu .note b{color:var(--gold);font-weight:600;margin-right:6px}
+.hon{padding:18px 16px}
+.hon h4{font:600 15px/1.3 var(--serif);letter-spacing:.12em;color:var(--gold-hi);margin-bottom:10px}
+.hon li{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line);align-items:start}
+.hon li:first-child{border-top:0}
+.hon .medal{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--grad);color:var(--on-gold);font:600 13px/1 var(--serif)}
+.hon strong{display:block;font-size:14.5px;font-weight:600}
+.hon span{font-size:13px;color:var(--muted)}
+@media (min-width:760px){.edu{grid-template-columns:1.4fr 1fr;gap:18px}.edu .main,.hon{padding:24px}}
+
+/* 页脚 */
+.motto{text-align:center;padding:40px 16px 8px}
+.motto q{font:500 clamp(19px,5.4vw,28px)/1.6 var(--serif);letter-spacing:.14em;quotes:"「" "」"}
+.motto small{display:block;margin-top:8px;font-size:11px;letter-spacing:.32em;color:var(--faint);text-transform:uppercase}
+footer{padding:28px 0 calc(28px + env(safe-area-inset-bottom));border-top:1px solid var(--line);margin-top:32px;color:var(--faint);font-size:12.5px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px}
+
+/* 返回顶部 & 提示 */
+.totop{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:40;width:46px;height:46px;border-radius:50%;cursor:pointer;
+  display:grid;place-items:center;background:var(--card);border:1px solid var(--line2);box-shadow:var(--shadow);
+  opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .22s var(--ease),transform .22s var(--ease)}
+.totop.show{opacity:1;transform:none;pointer-events:auto}
+.totop svg{width:20px;height:20px;fill:none;stroke:var(--gold-hi);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.toast{position:fixed;left:50%;bottom:calc(76px + env(safe-area-inset-bottom));z-index:60;transform:translate(-50%,10px);opacity:0;pointer-events:none;
+  background:var(--grad);color:var(--on-gold);font-weight:600;font-size:14px;padding:10px 18px;border-radius:999px;box-shadow:0 10px 30px -10px rgba(0,0,0,.6);
+  transition:opacity .2s var(--ease),transform .2s var(--ease);white-space:nowrap}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* 进入动画 */
+.anim .reveal{opacity:0;transform:translateY(14px);transition:opacity .25s var(--ease),transform .25s var(--ease)}
+.anim .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+
+/* ===== 打印 ===== */
+@media print{
+  @page{size:A4;margin:12mm 12mm}
+  :root{--bg:#fff;--bg2:#fff;--card:#fff;--card2:#fff;--text:#111;--muted:#444;--faint:#777;--line:#d9cba3;--line2:#b8994a;
+    --gold:#7a5a14;--gold-hi:#7a5a14;--grad:linear-gradient(#7a5a14,#7a5a14);--on-gold:#fff;--glow:#f4ecd6;--shadow:none;--shadow-hi:none;color-scheme:light}
+  body{background:#fff;font-size:10pt;line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .tl{gap:8px;padding-left:18px}.tl-item{padding:10px 12px}.tl-item::before{left:-18px;top:14px}
+  .tl-item h3,.pj h3{font-size:11.5pt}.meta{margin:6px 0 8px}.star{gap:4px}.star li{font-size:9.5pt;line-height:1.55}
+  .pj,.sk{gap:8px!important}.pj .card,.sk .card,.edu .main,.hon{padding:10px 12px!important}.pj .card{gap:6px}
+  .pj dd,.sk p{font-size:9.5pt}.sk .hd{margin-bottom:6px}.sk .chips{margin-bottom:6px}.sk .ic{width:28px;height:28px}
+  .summary{padding:10px 12px;font-size:10pt}.hl p{font-size:9pt}.motto{padding:14px 0 0}
+  .nav,.totop,.toast,.cta,.skip,.orn,.hero::before{display:none!important}
+  .print-only{display:block}
+  .hero{padding:0 0 10px}
+  .hero h1{font-size:28pt;margin:2px 0}
+  .portrait.lg,.hero-top .portrait{display:block!important;width:80px}
+  .hero .wrap{grid-template-columns:1fr 90px!important;gap:10px}
+  .hero-top{display:block}
+  .hero-top .portrait{display:none!important}
+  .portrait.lg{grid-column:2;grid-row:1/span 4}
+  .gold-text{-webkit-text-fill-color:currentColor;background:none;color:#5c430c}
+  .print-contact{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:10.5pt}
+  .sec{padding:12px 0;break-inside:auto}
+  .sec-h,.ptitle{margin-bottom:10px;break-after:avoid}
+  .motto small{display:none}.motto{padding:6px 0 0}
+  .sec-h h2{font-size:15pt}
+  .ptitle{font:600 11pt/1.4 var(--serif);color:#7a5a14;margin:6px 0 8px;letter-spacing:.1em}
+  .card,.tl-item,.hl .card{break-inside:avoid;box-shadow:none!important;transform:none!important}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .anim .reveal{opacity:1!important;transform:none!important}
+  .facts{display:none}
+  .hl{grid-template-columns:repeat(3,1fr)!important}
+  .hl .card,.hl .card:first-child,.hl .card:nth-child(2){grid-column:auto!important;padding:10px}
+  .hl .num{font-size:20pt}
+  .pj,.sk{grid-template-columns:1fr 1fr!important}
+  .edu{grid-template-columns:1.4fr 1fr!important}
+  a[href^="tel:"]{text-decoration:none}
+  footer{margin-top:4px;padding:4px 0;border-top:0}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <div class="nav-bar">
+      <a class="brand" href="#top" aria-label="回到顶部"><span class="mono" aria-hidden="true">曾</span><span><b id="navName"></b><small>Résumé</small></span></a>
+      <div class="tools">
+        <button class="ibtn" id="printBtn" type="button" aria-label="打印 / 导出 PDF" title="打印 / 导出 PDF">
+          <svg viewBox="0 0 24 24"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M6 14h12v7H6z"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="anchors" id="anchors" aria-label="页面导航"></nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-label="个人简介"><div class="wrap" id="hero"></div></section>
+  <div id="sections"></div>
+</main>
+<div class="motto" id="motto" hidden></div>
+<footer><div class="wrap" id="foot"></div></footer>
+
+<button class="totop" id="totop" type="button" aria-label="返回顶部"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const resume = {
+  name: "曾繁翔",
+  headline: "智能车辆工程 · 安徽理工大学（合肥校区）｜2026 级大一在读",
+  photo: "data:image/webp;base64,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",
+  summary: "工科背景 + <b>AIGC 全链路动手能力</b>：能独立完成从脚本、拍摄到成片的视频全流程，也常用 Vibe Coding 与无代码平台做出可演示的网站、小游戏与智能体；会用 SolidWorks 建模并用 AI 提效，学习曲线陡，<b>上手即产出</b>。",
+  keywords: ["AIGC 视频全流程", "Vibe Coding", "无代码智能体", "SolidWorks", "ROS2", "51 / STM32", "Python / C", "剪映专业版"],
+  contact: {
+    phone: ["199", "7962", "0577"],
+    email: { user: "2751732939", domain: ["qq", "com"] },
+    wechat: "同手机号"
+  },
+  facts: [
+    { k: "4", label: "项赛事经历" },
+    { k: "国赛", label: "RST 晋级" },
+    { k: "2030", label: "预计毕业" }
+  ],
+  highlights: [
+    { num: "国赛", title: "RST 机器鱼仿真 · 个人组晋级", desc: "独立完成建模、控制与调试，单次环境重建时间由半天缩短至 1 小时内。" },
+    { num: "省赛", title: "国才杯短视频 · 一人全流程", desc: "暑假零基础自学剪辑，约 1 个月交付成片，通过校内选拔晋级省赛。" },
+    { num: "15", unit: "天", title: "iCAN 无代码智能体 · 0→1", desc: "独立交付可演示的智能体原型；工作流复用后同类任务由小时级压缩到分钟级。" },
+    { num: "90", unit: "%", title: "知识库检索提效", desc: "用 WorkBuddy、ima 搭建个人知识库，资料检索耗时下降约 90%。" },
+    { num: "三等奖", title: "讲思政课比赛 · 校级", desc: "主导 PPT 视觉与逻辑重构，同类任务制作时间缩短约一半。" }
+  ],
+  experience: [
+      { org: "iCAN 大学生创新创业大赛", track: "AI 无代码智能体挑战赛", date: "2026.10.01 – 2026.10.15",
+        role: "独立参赛者（个人组）", result: "结果待公布",
+        s: "赛题要求在不写代码的前提下围绕真实场景交付可运行的智能体应用，个人独立出战、无团队支援。",
+        a: "独立完成需求拆解 → 场景选型 → 工作流编排 → 提示词迭代 → 多轮测试的完整链路，搭出可演示的智能体产品原型，并产出方案文档与路演材料。",
+        r: "15 天内完成从 0 到 1 的可演示交付；同一套工作流复用到个人内容生产与知识库场景后，同类任务处理时间由小时级压缩到分钟级。" },
+      { org: "RST 先进机器人及仿真技术大赛", track: "水中机器鱼仿真组", date: "2026.09.20 – 至今",
+        role: "独立参赛者（个人组）", result: "已晋级国赛 · 备赛中",
+        s: "赛题要求在水中机器鱼的仿真环境中完成运动控制与任务达成，个人组需独立完成建模、控制与调试全流程。",
+        a: "独立完成机器鱼模型搭建与仿真环境配置，反复调试推进参数与路径逻辑，把「游姿不稳、轨迹偏移」逐项拆解定位；同步自学 ROS2 与仿真工具链，边学边用，形成可复现的调试流程与排错文档。",
+        r: "通过选拔晋级国赛；单次环境重建时间由半天缩短至 1 小时内；目前正针对国赛赛题做控制精度与稳定性的专项优化，目标把轨迹误差压到赛题容差以内。" },
+      { org: "讲思政课比赛", track: "团队赛", date: "2026.09.20 – 2026.09.27",
+        role: "PPT 制作与材料审核负责人", result: "校级三等奖",
+        s: "团队参赛，讲授内容信息密度高、逻辑链条长，需在有限篇幅内讲清观点并抓住评委注意力。",
+        a: "主导 PPT 视觉体系与逻辑结构重构，把长段落拆成「观点—证据—结论」三层推进的版式；承担材料审核与方案修改，逐条核对史实与数据。",
+        r: "牵头完成 3 轮以上打磨，团队获校级三等奖；沉淀出可复用的「结构化表达 + 视觉降噪」PPT 生产流程，同类任务制作时间缩短约一半。" },
+      { org: "外研社·国才杯 短视频大赛", track: "", date: "2026.08.27 – 2026.09.13",
+        role: "独立制作人（脚本 / 拍摄 / 剪辑 / 配音 / 字幕 / 调音）", result: "晋级省赛",
+        s: "赛事要求高质量成片，而团队仅一人，且剪辑技能为暑假期间从零自学。",
+        a: "独立承担脚本撰写、分镜设计、线下样片拍摄、剪辑、调音、配音、字幕全流程，以「先出粗剪、再逐版打磨」的方式迭代，同步解决音画同步、字幕节奏与调色统一等细节问题。",
+        r: "通过校内选拔进入省赛；从零基础学剪辑到交付可用成片仅用约 1 个月，成片效果获指导教师认可。" }
+  ],
+  projects: [
+      { name: "AI Agent：从“用”到“搭”", badge: "个人项目", stack: ["提示词分层", "工具调用", "记忆与检索"],
+        now: "从调用现成模型转向自己设计工作流，已搭出可用智能体（含网站问答助手）。",
+        plan: "把网站问答助手升级为可检索本地资料的版本，让它真正能“答得上项目细节”。", link: "" },
+      { name: "Vibe Coding 进阶", badge: "持续实践", stack: ["组件拆分", "状态管理", "部署上线"],
+        now: "从「能跑就行」转向「能维护」，已独立完成个人网站与两个小游戏。",
+        plan: "回头重构早期项目，补齐版本管理与文档，让作品能持续迭代而不是一次性交付。", link: "" },
+      { name: "Claude Code / OpenClaw 提效工作方法", badge: "提效", stack: ["Claude Code", "OpenClaw", "命令行 Agent"],
+        now: "用命令行 Agent 处理批量改稿、代码生成与资料整理，写作与建模环节效率提升约 30%。",
+        plan: "把改稿、出图、建模检查这几个高频动作固化成可复用脚本，减少每次重新描述需求的时间。", link: "" },
+      { name: "单片机与嵌入式", badge: "本学期重点", stack: ["51", "STM32", "ROS2"],
+        now: "按「最小系统 → 外设 → 通信」的顺序推进，目标是打通智能车赛项所需的控制部分。",
+        plan: "本学期吃透 51 与 STM32 的最小系统与常用外设，下学期接 ROS2 做整车控制，直接服务智能车相关赛项。", link: "" },
+      { name: "AI 小工具的筛选与应用", badge: "持续跟进", stack: ["Gamma", "Claude Design", "ima", "WorkBuddy"],
+        now: "按「是否真省时间」筛选新工具，形成个人工具清单并固化到日常流程。",
+        plan: "每月复盘一次清单，淘汰低频工具，只保留 3–5 个真正提效的主力。", link: "" },
+      { name: "未知 AI 模型的横向探索", badge: "持续跟进", stack: ["写作", "代码", "多模态"],
+        now: "对比国内外主流模型的写作、代码与多模态能力并做选型笔记，对已用模型深挖非默认用法。",
+        plan: "把选型结论回灌到自己的工具链，按任务类型固定搭配模型，避免只用“默认模式”。", link: "" }
+  ],
+  skills: [
+    { group: "AI 应用与智能体", en: "AI & Agents", icon: "spark",
+      items: ["ChatGPT", "Codex", "Trae", "Claude Code", "OpenClaw", "DeepSeek Harness", "Gamma", "Claude Design"],
+      desc: "能独立搭建个人 Agent、无代码智能体工作流与提示词体系；用 Gamma、Claude Design 在 1–2 小时内产出高质量 PPT。" },
+    { group: "视频制作（全流程）", en: "Video", icon: "film",
+      items: ["剪映专业版", "剪辑", "调音", "配音", "字幕", "调色", "转场", "线下拍摄"],
+      desc: "能独立承担从脚本到成片的完整交付，单条成片从构思到定稿约 5 天。" },
+    { group: "编程与开发", en: "Coding", icon: "code",
+      items: ["Vibe Coding", "Python 基础", "C 基础", "HTML / CSS", "数据表格批处理"],
+      desc: "Vibe Coding 驱动开发，独立完成个人网站、小游戏、工具型网页。" },
+    { group: "三维建模与仿真", en: "CAD & Sim", icon: "cube",
+      items: ["SolidWorks", "零件与装配建模", "AI 辅助查错出图", "ROS2 仿真"],
+      desc: "熟练使用 SolidWorks 完成零件与装配建模；ROS2 仿真环境搭建处于项目化练习阶段。" },
+    { group: "知识管理", en: "Knowledge", icon: "book",
+      items: ["WorkBuddy", "ima", "个人知识库", "信息推送助手"],
+      desc: "形成「输入—沉淀—检索—复用」闭环，资料检索耗时下降约 90%。" },
+    { group: "英语口语训练", en: "English", icon: "chat",
+      items: ["每日跟读", "情景对话", "英文自我介绍", "三分钟脱稿表达"],
+      desc: "能完成英文自我介绍与竞赛项目的简短陈述；三分钟主题表达可脱稿完成。" }
+  ],
+  education: [
+    { school: "安徽理工大学（合肥校区）", dept: "新能源与智能网联汽车学院", date: "2026.09 – 2030.06（预计）",
+      tags: ["智能车辆工程专业（h26-6 班）", "本科在读 · 2026 级大一"],
+      note: "课外自学 51 单片机、STM32、ROS2 与 SolidWorks，把课外积累直接用于竞赛与作品；主攻「智能网联汽车 + AI 应用」，偏好软硬结合、能快速出成品的任务。" }
+  ],
+  honors: [
+    { mark: "国", title: "RST 先进机器人及仿真技术大赛", sub: "水中机器鱼仿真组 · 个人组晋级国赛" },
+    { mark: "省", title: "外研社·国才杯 短视频大赛", sub: "通过校内选拔 · 晋级省赛" },
+    { mark: "奖", title: "讲思政课比赛", sub: "校级三等奖（团队）" }
+  ],
+  certificates: [],
+  motto: "不打没有准备的仗，无限进步。",
+  updated: "2026-10-25"
+};
+</script>
+<script>
+(function(){
+"use strict";
+var R = resume, doc = document;
+function el(tag, attrs, kids){
+  var e = doc.createElement(tag);
+  if (attrs) for (var k in attrs){ var v = attrs[k]; if (v == null || v === false) continue;
+    if (k === "class") e.className = v; else if (k === "text") e.textContent = v; else if (k === "html") e.innerHTML = v; else e.setAttribute(k, v); }
+  if (kids) [].concat(kids).forEach(function(c){ if (c != null && c !== "") e.append(c); });
+  return e;
+}
+function has(a){ return Array.isArray(a) ? a.length > 0 : !!a; }
+var ICON = {
+  phone: '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>',
+  mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+  wechat: '<path d="M9 4C5 4 2 6.6 2 9.8c0 1.8 1 3.4 2.6 4.5L4 17l2.9-1.5c.7.2 1.4.3 2.1.3"/><path d="M15 9c3.9 0 7 2.4 7 5.4 0 1.6-.9 3-2.3 4l.5 2.4-2.6-1.3c-.8.2-1.7.3-2.6.3-3.9 0-7-2.4-7-5.4S11.1 9 15 9z"/>',
+  spark: '<path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><path d="m12 8 1.6 2.4L16 12l-2.4 1.6L12 16l-1.6-2.4L8 12l2.4-1.6z"/>',
+  film: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M17 9h4M3 15h4M17 15h4"/>',
+  code: '<path d="m8 8-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/>',
+  cube: '<path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/>',
+  book: '<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M9 7h6"/>',
+  chat: '<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/>'
+};
+function svg(name){ var s = el("span", {"aria-hidden":"true", html:'<svg viewBox="0 0 24 24">'+(ICON[name]||"")+'</svg>'}); return s.firstChild; }
+
+/* ---------- 联系方式（运行时拼接，防爬虫） ---------- */
+var C = R.contact || {};
+function phone(){ return has(C.phone) ? C.phone.join("-") : ""; }
+function email(){ return C.email ? C.email.user + String.fromCharCode(64) + C.email.domain.join(".") : ""; }
+
+var toastT;
+function toast(msg){ var t = doc.getElementById("toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toastT); toastT = setTimeout(function(){ t.classList.remove("show"); }, 1800); }
+function copy(text, ok){
+  function fallback(){ var ta = el("textarea", {readonly:"", style:"position:fixed;opacity:0;top:0"}); ta.value = text; doc.body.append(ta); ta.select();
+    try { doc.execCommand("copy"); toast(ok); } catch(e){ toast(text); } ta.remove(); }
+  if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(function(){ toast(ok); }, fallback); else fallback();
+}
+
+/* ---------- Hero ---------- */
+doc.getElementById("navName").textContent = R.name;
+doc.title = R.name + " · 个人简历";
+var hero = doc.getElementById("hero");
+function portrait(cls){
+  if (!R.photo || R.photo.indexOf("__") === 0) return null;
+  var w = el("div", {class:"portrait"+(cls?" "+cls:"")});
+  w.append(el("img", {src:R.photo, alt:R.name+" 的照片", width:"320", height:"480", decoding:"async", loading: cls ? "lazy" : "eager", fetchpriority: cls ? null : "high"}), el("span", {class:"dot", "aria-hidden":"true"}));
+  return w;
+}
+var top = el("div", {class:"hero-top"}, [portrait(""), el("div", null, [
+  el("p", {class:"eyebrow", text:"Personal Résumé"}),
+  el("h1", {class:"gold-text", text:R.name}),
+  R.headline ? el("p", {class:"sub", text:R.headline}) : null
+])]);
+hero.append(top);
+var lg = portrait("lg"); if (lg) hero.append(lg);
+if (R.summary) hero.append(el("p", {class:"summary", html:R.summary}));
+if (has(R.keywords)) hero.append(el("ul", {class:"kw", "aria-label":"技能关键词"}, R.keywords.map(function(k, i){ return el("li", {class:"chip"+(i<3?" g":""), text:k}); })));
+var cta = el("div", {class:"cta"});
+if (C.email) { var be = el("button", {class:"btn primary", type:"button", "aria-label":"复制邮箱地址"}, [svg("mail"), el("span", {text:"复制邮箱"})]);
+  be.addEventListener("click", function(){ copy(email(), "邮箱已复制：" + email()); }); cta.append(be); }
+if (phone()) cta.append(el("a", {class:"btn", href:"tel:"+C.phone.join("")}, [svg("phone"), el("span", {text:"拨打电话"})]));
+if (C.wechat) { var bw = el("button", {class:"btn", type:"button"}, [svg("wechat"), el("span", {text:"微信 · " + C.wechat})]);
+  bw.addEventListener("click", function(){ var id = C.wechat === "同手机号" ? C.phone.join("") : C.wechat; copy(id, "微信号已复制：" + id); }); cta.append(bw); }
+if (cta.children.length) hero.append(cta);
+var pc = el("p", {class:"print-only print-contact"}, [
+  phone() ? el("span", {text:"电话 " + phone()}) : null,
+  C.email ? el("span", {text:"邮箱 " + email()}) : null,
+  C.wechat ? el("span", {text:"微信 " + C.wechat}) : null ]);
+hero.append(pc);
+if (has(R.facts)) hero.append(el("div", {class:"facts"}, R.facts.map(function(f){ return el("div", null, [el("b", {class:"gold-text", text:f.k}), el("span", {text:f.label})]); })));
+
+/* ---------- 各模块 ---------- */
+function expList(items){
+  return el("div", {class:"tl"}, items.map(function(x){
+    var star = el("ul", {class:"star"});
+    [["情境", x.s], ["行动", x.a], ["结果", x.r]].forEach(function(p, i){ if (p[1]) star.append(el("li", {class: i === 2 ? "r" : null}, [el("b", {text:p[0]}), el("span", {text:p[1]})])); });
+    return el("article", {class:"card tl-item reveal"}, [
+      el("div", {class:"head"}, [el("h3", {text:x.org}), x.date ? el("span", {class:"date", text:x.date}) : null]),
+      x.track ? el("p", {class:"track", text:x.track}) : null,
+      el("div", {class:"meta"}, [x.role ? el("span", {class:"tag", text:x.role}) : null, x.result ? el("span", {class:"tag res", text:x.result}) : null]),
+      star ]);
+  }));
+}
+function projList(items){
+  return el("div", {class:"pj"}, items.map(function(x){
+    var dl = el("dl");
+    if (x.now) dl.append(el("div", null, [el("dt", {text:"现状 · 成果"}), el("dd", {class:"now", text:x.now})]));
+    if (x.plan) dl.append(el("div", null, [el("dt", {text:"下一步"}), el("dd", {text:x.plan})]));
+    return el("article", {class:"card corner reveal"}, [
+      el("div", {class:"top"}, [el("h3", {text:x.name}), x.badge ? el("span", {class:"badge", text:x.badge}) : null]),
+      has(x.stack) ? el("div", {class:"stack", "aria-label":"技术栈"}, x.stack.map(function(s){ return el("span", {text:s}); })) : null,
+      dl,
+      x.link ? el("a", {class:"link", href:x.link, target:"_blank", rel:"noopener", text:"查看项目 →"}) : null ]);
+  }));
+}
+var SECTIONS = [
+  { id:"education", title:"教育与荣誉", en:"Education", nav:"教育", ok: has(R.education) || has(R.honors) || has(R.certificates), render: function(){
+      var box = el("div", {class:"edu"});
+      (R.education||[]).forEach(function(e){
+        box.append(el("article", {class:"card corner main reveal"}, [
+          el("div", {class:"row"}, [el("h3", {text:e.school}), e.date ? el("span", {class:"date", text:e.date}) : null]),
+          e.dept ? el("p", {class:"dept", text:e.dept}) : null,
+          has(e.tags) ? el("div", {class:"major"}, e.tags.map(function(t, i){ return el("span", {class:"chip"+(i?"":" g"), text:t}); })) : null,
+          e.note ? el("p", {class:"note"}, [el("b", {text:"自主延伸"}), e.note]) : null ])); });
+      function list(title, arr){ return el("article", {class:"card hon reveal"}, [el("h4", {text:title}), el("ul", null, arr.map(function(h){
+        return el("li", null, [el("span", {class:"medal", "aria-hidden":"true", text:h.mark || "★"}), el("div", null, [el("strong", {text:h.title}), h.sub ? el("span", {text:h.sub}) : null])]); }))]); }
+      if (has(R.honors)) box.append(list("荣誉", R.honors));
+      if (has(R.certificates)) box.append(list("证书", R.certificates));
+      return box; } },
+  { id:"highlights", title:"亮点成果", en:"Highlights", nav:"亮点", ok: has(R.highlights), render: function(){
+      return el("div", {class:"hl"}, R.highlights.slice(0, 5).map(function(h){
+        return el("article", {class:"card corner reveal"}, [
+          el("p", {class:"num gold-text"}, [h.num, h.unit ? el("small", {text:h.unit}) : null]),
+          el("h3", {text:h.title}), h.desc ? el("p", {text:h.desc}) : null ]); })); } },
+  { id:"experience", title:"科创竞赛", en:"Competitions", nav:"竞赛", ok: has(R.experience), render: function(){ return expList(R.experience); } },
+  { id:"projects", title:"项目与学习", en:"Projects", nav:"项目", ok: has(R.projects), render: function(){ return projList(R.projects); } },
+  { id:"skills", title:"技能矩阵", en:"Skills", nav:"技能", ok: has(R.skills), render: function(){
+      return el("div", {class:"sk"}, R.skills.map(function(s){
+        return el("article", {class:"card reveal"}, [
+          el("div", {class:"hd"}, [el("span", {class:"ic"}, svg(s.icon)), el("h3", null, [s.group, s.en ? el("small", {text:s.en}) : null])]),
+          has(s.items) ? el("div", {class:"chips"}, s.items.map(function(t){ return el("span", {class:"chip", text:t}); })) : null,
+          s.desc ? el("p", {text:s.desc}) : null ]); })); } }
+];
+var host = doc.getElementById("sections"), nav = doc.getElementById("anchors"), n = 0;
+nav.append(el("a", {href:"#top", text:"简介", "data-id":"top"}));
+SECTIONS.forEach(function(s){
+  if (!s.ok) return; var body = s.render(); if (!body) return; n++;
+  host.append(el("div", {class:"orn", "aria-hidden":"true"}, el("i")));
+  host.append(el("section", {class:"sec", id:s.id, "aria-labelledby":s.id+"-h"}, el("div", {class:"wrap"}, [
+    el("header", {class:"sec-h"}, [el("span", {class:"no", text:(n<10?"0":"")+n}), el("h2", {id:s.id+"-h", text:s.title}), el("span", {class:"en", text:s.en})]), body ])));
+  nav.append(el("a", {href:"#"+s.id, text:s.nav, "data-id":s.id}));
+});
+if (R.motto){ var m = doc.getElementById("motto"); m.hidden = false; m.append(el("q", {class:"gold-text", text:R.motto.replace(/[。.]$/, "")}), el("small", {text:"Motto"})); }
+doc.getElementById("foot").append(el("span", {text:"© " + (R.updated||"").slice(0,4) + " " + R.name + " · 保留所有权利"}), el("span", {text:"最后更新：" + R.updated}));
+
+/* ---------- 打印 / 返回顶部 ---------- */
+var root = doc.documentElement;
+doc.getElementById("printBtn").addEventListener("click", function(){ window.print(); });
+var totop = doc.getElementById("totop");
+totop.addEventListener("click", function(){ window.scrollTo({top:0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"}); });
+var ticking = false;
+window.addEventListener("scroll", function(){ if (ticking) return; ticking = true;
+  requestAnimationFrame(function(){ totop.classList.toggle("show", window.scrollY > 600); ticking = false; }); }, {passive:true});
+
+/* ---------- 进入动画 + 导航高亮 ---------- */
+if ("IntersectionObserver" in window){
+  if (!matchMedia("(prefers-reduced-motion: reduce)").matches){
+    root.classList.add("anim");
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); }, {rootMargin:"0px 0px -8% 0px"});
+    doc.querySelectorAll(".reveal").forEach(function(r){ io.observe(r); });
+  }
+  var links = nav.querySelectorAll("a");
+  var spy = new IntersectionObserver(function(es){ es.forEach(function(e){ if (!e.isIntersecting) return;
+    links.forEach(function(a){ var on = a.getAttribute("data-id") === e.target.id; a.classList.toggle("on", on); if (on){ a.setAttribute("aria-current", "true");
+      var L = nav.scrollLeft, r = a.offsetLeft - nav.offsetLeft; if (r < L || r + a.offsetWidth > L + nav.clientWidth) nav.scrollTo({left: r - 16, behavior:"smooth"}); } else a.removeAttribute("aria-current"); }); }); },
+    {rootMargin:"-45% 0px -50% 0px"});
+  doc.querySelectorAll("#top, .sec").forEach(function(s){ spy.observe(s); });
+}
+window.addEventListener("beforeprint", function(){ doc.querySelectorAll(".reveal").forEach(function(r){ r.classList.add("in"); }); });
+})();
+</script>
+</body>
+</html>
